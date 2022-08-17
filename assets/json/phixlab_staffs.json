@@ -1,0 +1,52 @@
+{
+  "phixlab_staff": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "age": "25",
+      "role": "Teacher"
+    },
+    {
+      "id": "2",
+      "name": "Pet Drura",
+      "age": "30",
+      "role": "Counselor"
+    },
+    {
+      "id": "3",
+      "name": "Phil Jade",
+      "age": "19",
+      "role": "Teacher"
+    },
+    {
+      "id": "4",
+      "name": "Abigail Doe",
+      "age": "21",
+      "role": "Counselor"
+    },
+    {
+      "id": "5",
+      "name": "Lenon Dan",
+      "age": "23",
+      "role": "Admin"
+    },
+    {
+      "id": "6",
+      "name": "Legend Jon",
+      "age": "28",
+      "role": "Admin"
+    },
+    {
+      "id": "7",
+      "name": "Sadio Sante",
+      "age": "37",
+      "role": "Instructor"
+    },
+    {
+      "id": "8",
+      "name": "Rich Rungarf",
+      "age": "27",
+      "role": "Instructor"
+    }
+  ]
+}
