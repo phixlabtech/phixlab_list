@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -47,12 +48,17 @@ class _StaffListScreenState extends State<StaffListScreen> {
 
   Future<PhixlabStaff> fetchStaff() async {
     String data = await rootBundle.loadString('assets/json/phixlab_staff.json');
-    final jsonResult = json.decode(data);
+    final jsonResult = await compute(json.decode, data);
     return PhixlabStaff.fromJson(jsonResult);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: false,
+          title: const Text("Phixlab Staff"),
+        ),
+        body: Container());
   }
 }
