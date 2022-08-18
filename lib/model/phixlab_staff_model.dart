@@ -15,8 +15,7 @@ class PhixlabStaff {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (staff != null) {
-      data['phixlab_staff'] =
-          staff!.map((v) => v.toJson()).toList();
+      data['phixlab_staff'] = staff!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -45,4 +44,11 @@ class Staff {
     data['role'] = role;
     return data;
   }
+}
+
+class GroupedStaff {
+  String role;
+  List<Staff> groupStaff;
+
+  GroupedStaff({required this.role, required this.groupStaff});
 }
