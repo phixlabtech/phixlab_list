@@ -42,13 +42,15 @@ class _StaffListScreenState extends State<StaffListScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       staff ??= await fetchStaff();
-      print(staff?.staff?.first.name);
+      if (kDebugMode) {
+        print(staff?.staff?.first.name);
+      }
     });
   }
 
   Future<PhixlabStaff> fetchStaff() async {
     String data = await rootBundle.loadString('assets/json/phixlab_staff.json');
-    final jsonResult = await compute(json.decode, data);
+    final jsonResult = await compute(json.decode, data);// compute
     return PhixlabStaff.fromJson(jsonResult);
   }
 
